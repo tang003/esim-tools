@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/api/account.api.ts","./src/api/client.ts","./src/api/esim.api.ts","./src/api/mfa.api.ts","./src/api/session.api.ts","./src/router/index.ts","./src/stores/esim.store.ts","./src/utils/qrcode.ts","./src/app.vue","./src/views/homeview.vue"],"version":"5.9.3"}

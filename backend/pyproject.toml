@@ -1,0 +1,33 @@
+[project]
+name = "giffgaff-esim-qr-backend"
+version = "0.1.0"
+description = "FastAPI backend for fetching existing giffgaff eSIM LPA strings"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.116.0",
+  "uvicorn[standard]>=0.35.0",
+  "httpx>=0.28.0",
+  "redis>=5.2.0",
+  "pydantic>=2.10.0",
+  "pydantic-settings>=2.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+  "ruff>=0.9.0",
+]
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
