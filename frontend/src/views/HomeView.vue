@@ -41,7 +41,7 @@ function confirmReserveNew() {
           <span class="text-xl">▯</span>
         </div>
         <h1 class="text-4xl font-black tracking-normal md:text-5xl">eSIM 获取工具</h1>
-        <p class="mt-3 text-base text-slate-600">中国可服务时间：11:30 至次日 04:30；英国时间 04:30 至 21:30。</p>
+        <p class="mt-3 text-base text-slate-600">获取已有二维码全天可用；申请新的 eSIM 建议在中国时间 11:30 至次日 04:30 操作。</p>
       </header>
 
       <section class="mb-7 grid grid-cols-3 gap-3">
@@ -173,7 +173,7 @@ function confirmReserveNew() {
 
           <div v-if="store.pendingAction === 'reserveNew' && !store.lpaString" class="rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p class="text-sm font-semibold text-amber-800">
-              申请新的 eSIM 前，giffgaff 可能会要求再次验证。验证码由 giffgaff 发送到账号绑定的邮箱或手机号，不是通过 eSIM 卡发送。
+              申请新的 eSIM 前，giffgaff 可能会要求再次验证；建议在中国时间 11:30 至次日 04:30 操作。验证码由 giffgaff 发送到账号绑定的邮箱或手机号，不是通过 eSIM 卡发送。
             </p>
             <div class="mt-4 grid gap-3 md:grid-cols-[1fr_auto]">
               <select v-model="store.mfaChannel" class="input">
@@ -280,7 +280,7 @@ function confirmReserveNew() {
       </section>
 
       <footer class="mt-8 text-center text-sm text-slate-600">
-        获取已有 eSIM 不换卡；申请新的 eSIM 会调用 giffgaff 新 eSIM 下发流程，操作前请确认当前号码确实需要重新下发。
+        获取已有 eSIM 二维码不受服务窗口限制且不换卡；申请新的 eSIM 会调用 giffgaff 新 eSIM 下发流程，操作前请确认当前号码确实需要重新下发。
       </footer>
     </div>
   </main>
