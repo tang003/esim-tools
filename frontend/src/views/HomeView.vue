@@ -44,6 +44,12 @@ function confirmReserveNew() {
         <p class="mt-3 text-base text-slate-600">获取已有二维码全天可用；申请新的 eSIM 建议在中国时间 11:30 至次日 04:30 操作。</p>
       </header>
 
+      <div v-if="store.sessionId" class="mb-5 flex justify-end">
+        <button class="danger-btn" :disabled="store.loading" @click="store.clear">
+          退出登录
+        </button>
+      </div>
+
       <section class="mb-7 grid grid-cols-3 gap-3">
         <div v-for="step in [1, 2, 3]" :key="step" class="rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-200">
           <div class="flex items-center gap-3">
